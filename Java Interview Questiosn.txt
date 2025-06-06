@@ -1,0 +1,11 @@
+
+    1. Can a class have multiple constructors? What is constructor overloading?
+        Yes, a class can have multiple constructors with different parameter lists. This is called constructor overloading. 
+        It provides flexibility to create objects in different ways.
+
+    2. Difference between == and .equals() with objects
+        To compare object references, we use ==. But to compare object contents or values, we should override and use .equals(). 
+        For example, two String objects with the same value will return true with .equals() but false with == unless they point to the same memory.
+
+    3. What is SIB:
+        SIB (Static intialization block) is the first block to executed as soon as a class is load in a memory.It is used to instantiate static members.

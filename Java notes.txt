@@ -1,0 +1,222 @@
+Java Basics and OOPS
+
+
+What is JDK:-
+    Stands for Java devlopment tool kit.
+
+JVM:-
+    Stands for Java Virtual Machine
+    Java is platform independent because of the JVM, But JVM is platform dependent.
+        i.e Different OS will have different JVM.
+
+    If we have to run a java application we need a JVM installed.
+
+    Java applications are called WORA (Write once runs anywhere)
+
+
+How Java works behind the scene:-
+    1. We as devloper write a code, to right a code we need IDE,Code editor.
+    2. JVM is resposnible to run our java application. It cant understand the source code directly, because JVM only understand byte code.
+    3. So to run our code in JVM, first we have to compile to byte code.
+    4. For compliation, in JDK we get javac which is responsible to compile the source code to byte code.
+    5. After java compiler compiles the code JVM can now understand it and tried to run it.
+    6. Lets suppose in our application or code, we have use some extra classes or method which might required some extra libraries. So along with JVM there is another concept called JRE comes into picture.
+    7. JRE(Java Runtime Environment) contains JVM and some extra libraries. JRE provides a run time environment to execute Java application.
+    8. As our application may contains 100 files JVM is only looking for one file which having main method.
+    9. The file that includes the main method is starting point of our application.
+
+
+    Build in Packages in Java
+    lang:- String,StringBuffer,System
+    util:- Contains collection framework like Arrays,ArrayList,Map,HashMap etc
+
+
+    JVM Architecture:-
+        JVM or Java Virtual Machine is the core component of java which enables platform independence.
+
+        Following are the components of JVM 
+        
+        1. Class Loader
+        2. JVM Memory
+            a. Method area
+            b. Heap
+            c. Stack
+            d. Program Counter (PC) Register
+        3. Execution engine
+    
+        Explanation:-
+            1. Class Loader:- When we write a code in .java file, java compiler compiles that source code into byte code and then JVM picks the .class file to run it.
+                              Class Loader is responsible to perform three major tasks
+                                 a. Loading
+                                 b. Linking
+                                 c. Intilizing
+
+                                 a. Loading:- It reads the .class file and generate the binary data i.e 0's and 1's. It saves some basic info in the Method area.
+                                              Information like Name of the fully qualified class or parent class if present,whether the .class file is related to an interface or enum.
+
+                                 b. Linking:- Linking perfroms three operations
+                                            i.Verification:- Verifies whether the .class file is in correct format if not we get runtime excetion which belongs to java.lang.VerifyError             
+                                            ii. Preparation:- Allocates memory for static members.
+                                            ii. Resolutions:- 
+
+                                 c. Intilizing:- It assigs the values to static members,it executes from top to bottom
+
+            2. Java Memory:-
+                a. Method area:- Store class level information like class name its parent class name, methods variable name. It is a shared resource.
+
+                b. Heap area:- The runtime data area where objects and instance variables are stored.It is also shared among all threads and is managed by the Garbage Collector.
+
+                c. Stack:- 
+                        For every method JVM creates its own stack called stack frame. It stores the method call. All the local variable are stored in their respected stack frame.
+                        After the method completes, JVM destory the stack fram
+
+            
+            3. Execution Engine:- Responsible for executing bytecode. It is classified into 3 parameters
+
+                a. Interpreter :- Interpret byte code line by line. Disadvantage is if a functional call multiple times it interpret multiple times.
+                b. JIT compiler:- Increases efficiency of Interpreter by converting the frequently repeated code into native code.
+                c. Garbage collector:- The object which is there in memory and not being user the garbage collector removes that object.
+                
+
+            4.Native Method Interface (JNI):- Provides a way for java to interact with native application which are written in C/C++
+
+
+
+    Class & Objects:-
+        Class:- Class is like a template or a sturcture which defines properties (attributes) or behaviour (methods) of an object.
+
+        Object :- An object is an instance of the class that are created to use the attributes and methods of a class. Memory allocation is done as soon as object is created.
+
+    psvm (public static void main):- It is the entry point of any program.
+                        public:- this method can accessible from anywhere.
+                        static:- we can call this method without creating object of the class.
+                        void:- This method don't return anything
+                        main:- name of the method
+
+
+    Constructor:-
+        A constructor is nothing but a special type of method is invoked as soon as object is created using 'new' keyword.
+        Its purpose is to initialize the object. Constructors don't have a return type, not even void, and their name matches the class name.                    
+
+Variable:-
+    1. Variables are used as container to store the data or values temporary.
+    2. To declare a variable we have to sepecify the data type of the variable as java is Strongly types language.
+
+
+Data Types:-
+    1. Data type is the format in which we have to store our data and values.
+    2.Mostly there are two types 
+         a. Primitive types
+         b. Non Primitive types
+
+    Primitive types:-
+        They are basic and inbuild data types.
+
+        Integer:-
+            byte:- 1 byte
+            short:- 2 byte
+            int:-  4 byte  (default)
+            long:- 8 bytes
+
+        Floating:- 
+            float:- 4 byte  (less precision i.e after point can store less numbers than double)         
+            double:- 8 byte (default)
+
+        Character:-
+            char:- 2 bytes
+
+        Boolean:-
+            boolean:- values are true,false
+    
+    if we want to specify long data type after the value we have to mention 'l' because by default in consider int.
+
+    similary for floar we have to mention 'f' after the value as it consider double as bydefault type.
+            
+
+Type Conversion and Type Casting:-
+    Type Conversion:- Whenever the conversion of one data type to another data type happens implicitly then it is called Type conversion.
+    For eg:-
+    Range of byte is -128 to +127
+    so if we assign byte variable to int varible, It will be okay
+        byte a =56
+        int b=a;
+        this can be done as there will be no data loss here
+
+    Type Casting:- 
+        When we convert the one data type into other explicitly, then it is called Type casting.
+        Here chances of data lossing increase.
+
+        For eg :-
+            float a = 7.6
+            int b= a;
+
+            So here, we cant assign float variable a to int variable b due to decimal value.
+            But if we want to convert it wilingly then
+            
+            int b= (int)a;
+            here we are explicitly converting into int data type 
+            so at the end the output will be b=7 as we will loss the .6 value due to type casting.
+
+Arithmatic Operation:-
+
+    So in Java we have operators like + - * / %
+
+    For addition:- a + b
+    For substraction:- a - b
+    For Multiplication:- a * b
+    For Division to get quotient :- a / b
+    For Division to get remainder :- a % b
+
+    Eg:-
+        num=5;
+        num++ :-Post increment
+        +numm :- Pre increment
+
+        Both of the operation will give same output 6 if they are use as individual statement
+
+        but we get different output if we assign the num value into another variable
+
+        int result = num ++ :- 5   :- Here first value is assigned to the result variable and then num is incremented
+        int result = ++num :- 6   :- Here first the  num is incremented and then it is assigned to the result
+
+
+Relational Operation
+
+    < :- less than
+
+    > : greater than
+
+    <=: less than and equal to
+
+    >=: greater than and equal to
+
+    == :- equal to
+
+    != :- not equal to
+
+
+
+
+Method Overloading:-
+     same method name but different parameters.
+
+
+Stack and Heap:-
+    
+    Stack:-
+        The local variable are store inside the Stack.
+        as soon as we create a variable and assign a value to it
+        for eg:- int data=5;
+        So the 'data' variable will be stored inside the stack with key value pair
+
+
+        
+    Heap:- 
+        The instance variable are store inside the Heap
+
+
+
+
+String:-
+    It is not a Primitive type, it is a classes
+    Strings are immutable
