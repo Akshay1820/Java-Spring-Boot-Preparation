@@ -9,3 +9,8 @@
 
     3. What is SIB:
         SIB (Static intialization block) is the first block to executed as soon as a class is load in a memory.It is used to instantiate static members.
+
+    4. What is the difference between No-arg constructor and default constructor?
+        No-arg constructor is a constructor without arguments.
+        Default constructor is a constructor implicitly written by the compiler if a class does not have any constructors. 
+        Default constructor is always a No-arg constructor.

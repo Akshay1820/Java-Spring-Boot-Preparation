@@ -82,10 +82,10 @@ How Java works behind the scene:-
 
 
 
-    Class & Objects:-
-        Class:- Class is like a template or a sturcture which defines properties (attributes) or behaviour (methods) of an object.
+Class & Objects:-
+    Class:- Class is like a template or a sturcture which defines properties (attributes) or behaviour (methods) of an object.
 
-        Object :- An object is an instance of the class that are created to use the attributes and methods of a class. Memory allocation is done as soon as object is created.
+    Object :- An object is an instance of the class that are created to use the attributes and methods of a class. Memory allocation is done as soon as object is created.
 
     psvm (public static void main):- It is the entry point of any program.
                         public:- this method can accessible from anywhere.
@@ -98,9 +98,35 @@ How Java works behind the scene:-
         A constructor is nothing but a special type of method is invoked as soon as object is created using 'new' keyword.
         Its purpose is to initialize the object. Constructors don't have a return type, not even void, and their name matches the class name.                    
 
+    
+    Static:- In Java, the static keyword is used to indicate that a member belongs to the class itself, 
+            rather than to instances of the class.
+
+            1. Static members are shared across all instances.
+            2. They can be accessed without creating an object of the class.
+            3. Static methods cannot used non-static data members or call non static methods directly.
+            4. Static block executes as soon as JVM loads the class.
+
+        Use cases:-
+            1. To minimize memory:- as multiple instance will use single copy of a data member. It requires less memory.
+            2. To handle some exeception before it breaks your code:- As we know static block executes even before constructor loads so if we want to check some operations like
+                                database connection we can use static block.
+
+            3. Helper or Utility class:- In Helper class as we mentioned methods or data members,
+                                 that we want to user multiple times anywhere in a project.
+                                 we can use static methods.
+        
+
+
 Variable:-
     1. Variables are used as container to store the data or values temporary.
     2. To declare a variable we have to sepecify the data type of the variable as java is Strongly types language.
+
+
+    Instance variable:- Variables that are created within the class called as instance variable.
+
+    Local variables:- Variables that are created inside a method or a constructor called local variables.
+
 
 
 Data Types:-
