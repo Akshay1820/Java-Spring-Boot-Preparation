@@ -9,3 +9,38 @@
 
     3. What is SIB:
         SIB (Static intialization block) is the first block to executed as soon as a class is load in a memory.It is used to instantiate static members.
+
+    4. What is the difference between No-arg constructor and default constructor?
+        No-arg constructor is a constructor without arguments.
+        Default constructor is a constructor implicitly written by the compiler if a class does not have any constructors. 
+        Default constructor is always a No-arg constructor.
+
+    5. Do constructor has a return type?
+        explicitly we cant mention a return type to a constructor but as we know after instanciating a class using new keyword
+        it returns the object of that class, so we can say that yes implicitly it returns the object. 
+
+    6. Why static methods cannot access non static variables?
+       As soon as JVM loads a class first in formose static variables are loaded followed by them static method and static blocks loads
+       therefore when static method executes it can't find the instance or non static variables.    
+      Since static methods are not tied to any object, they do not have access to instance (non-static) variables, which belong to specific objects.
+
+    7. Why Strings are immutable?
+      Strings in Java are immutable, which means once a String object is created, 
+      its value cannot be changed. Any operation that seems to modify a string actually creates a new String object in memory.
+
+      String name = "John";
+      name = name + " Clark";
+      What's really happening:
+      The string "John" is stored in the String pool (which is part of the heap), and the reference name in the stack points to it (say address 101).
+
+      When we do name = name + " Clark", a new string object "John Clark" is created in the heap (say address 105), and now name points to this new object.
+
+      The original "John" object remains unchanged in memory.
+
+      So, we are not modifying the original string — we are just changing the reference to point to a new object.
+
+
+    8. Why Mutiple Inheritence is not directly allowed in JAVA.
+        Multiple Inheritence the child class will have multiple Parent class, the problem occurs when two parent 
+        class will have same method then which method will child class call. This problem is called Ambiguity so,
+        Java does not support multiple Inheritence. 
