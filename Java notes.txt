@@ -288,7 +288,6 @@ OOP (Object Oriented Programming):-
         It calls its super class constructor unless it reached upto Object class.
 
 
-
     Inheritence:-
         It is a core concept of OOP which allows a child or Derived class to inherit or aquries the properties and behaviour of Parent or Base class.
         This promotes code reusability, improves maintainability, and supports polymorphism.
@@ -301,3 +300,31 @@ OOP (Object Oriented Programming):-
 
         Advantages:-
             Reduce Code duplication    
+
+     Polymorphism :-
+        The word is derived from 2 Greek words that are Poly:- Many and morphism:- forms:-
+        So we can say pollymorphism allows the same action or behaviour to be erform in different ways.
+        based on object which is calling it.
+
+        Two types of Polymorphism:-
+            Compile time :- Method Overloading
+            Run Time :- Method Overiding      
+
+
+    'Final' Keyword:-
+        Final class:- We cant extend base class to other class
+        Final method:- we can't do method overiding 
+        Final variable:- we can't change the value of the varible after assigned
+
+
+    Abstraction:-
+        It refers to the concept of hiding internal implementation details and showing only the essential features
+        It is implemented using abstract classes and interfaces.
+
+    'Abstract' Keyword
+        If we make a method abstract its compulsory that it belongs to abstract class.
+        But vice versa it is not mandatory the Abstract class should only have abstract methods, it can have implement methods as well
+        thats why it is called 'parial' abstraction.
+    
+        If we achived abstraction through interface it is 'fully' abstraction. As methods inside interface are abstract by default.
+     

@@ -44,3 +44,12 @@
         Multiple Inheritence the child class will have multiple Parent class, the problem occurs when two parent 
         class will have same method then which method will child class call. This problem is called Ambiguity so,
         Java does not support multiple Inheritence. 
+
+    9. What is the difference between == & .equals
+        '==':- is and operator for primitive type which means if use this operator on primitive types variables like 
+        (int,char,float) it will check the values.
+        But if use this operator to compare the objects it will compare the memory location of that objects not the actual content.
+
+        .equals:- As we know every class is child class of 'Object' class so if directly use .equals method to compare
+                  to objects it will call the .equals method of 'Object' class and that method also compare the memory address same as '=='
+                  operator. So if we want to compare the contents we have to overide that method in our child class.
