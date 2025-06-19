@@ -328,3 +328,37 @@ OOP (Object Oriented Programming):-
     
         If we achived abstraction through interface it is 'fully' abstraction. As methods inside interface are abstract by default.
      
+
+     Anonymous Inner Class :- An Anonymous Inner cllas in Java is a class without a name that is declared and instantiated in a Signle expression.
+                              It is typically used to provide a one time implementation of an interface or abstract class- usually when the implementation is short and used only once.
+
+
+     Interface:- An interface in Java is a reference type that defines a set of abstract methods that a class must implement.
+                By using interfaces, we achieve abstraction and also support multiple inheritance of type, since a class can implement multiple interfaces
+
+                * All methods in interface are by default public and abstract
+                * All variables in interfaces are final and static 
+
+        Why we need Interface:-
+            We need interfaces in Java primarily to achieve abstraction and loose coupling in our applications.
+            Interfaces allow us to define a contract for what a class should do, without dictating how it should do it. This makes our code more flexible, maintainable, and scalable.
+                                
+
+Enums:- 
+    Enums are set of named constants.
+    Enums are type-safe, meaning you can’t assign values outside the defined constants.
+    Internally, enums are implemented as classes in Java and can have fields, constructors, and methods.
+
+
+ Annotations:-
+
+    @Overide:-
+        When we were implementing  method overiding, the method name should be matched, it dont give a error during compile time,
+         but it might get affected at run time. So @Overide annoation informs Java compiler to check whether the method belongs to its base
+         class or not, if not hilight the issue, so it will inform us that method name are not matching for overiding during compile time only.   
+
+    @FunctionalInterface:- By mentioning this annotation Compiler make sure that the interface will have only one abstract method.
+
+Types of Interface:-
+    Normal interfaces:- Interfaces having abstract methods
+    Functional interface:- Interface that have only one abstract method. Also called as SAM(Single Abstract Method)
