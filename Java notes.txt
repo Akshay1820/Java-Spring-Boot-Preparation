@@ -362,3 +362,53 @@ Enums:-
 Types of Interface:-
     Normal interfaces:- Interfaces having abstract methods
     Functional interface:- Interface that have only one abstract method. Also called as SAM(Single Abstract Method)
+
+
+
+Exceptions:- In Java, exceptions are events that disrupt the normal flow of a program during runtime.
+             Java provides a robust exception handling mechanism using try-catch-finally blocks to gracefully handle such errors without crashing the application.
+
+            All exceptions are derived from the Throwable class, which has two main branches:
+
+                Exception – for conditions that programs should catch and handle.
+                Error – for serious issues like memory leaks or JVM crashes, which should not be handled by the application.
+
+            Types of errors:-
+                Compile time error:- Syntax worng
+                Run time error:- Null pointer exceptions
+                Logical error
+
+        Types of Exceptions:
+            Checked Exceptions
+                Compiler makes us mandatory to handle these exception at comile time only
+                Example: IOException, SQLException.
+                Must be either caught using a try-catch block or declared with throws.
+            Unchecked Exceptions
+                Occur at runtime and not checked at compile-time.
+                It is not mandatory to handle such kind of exceptions
+                Example: NullPointerException, ArrayIndexOutOfBoundsException.
+                Extend from RuntimeException.
+
+    'throw' Keyword:- This keyword is used to mannually throw the exception intentionally even if JVM does not throw.
+                      We can throw an Exception explicitly when we want to validate the data.
+
+     'throws' Keyword:- In Java, the throws keyword is used in a method declaration to indicate that the method might throw one or more exceptions,
+                         and it is the caller’s responsibility to handle or declare those exceptions.
+                       It's mainly used with checked exceptions, which must either be caught using try-catch or 
+                       declared using throws.                             
+
+
+
+ Collection API:-
+    The Collection API in Java is a set of classes and interfaces that provide a standard way to store, access, and 
+    manipulate groups of objects — like lists, sets, and maps.                      
+
+    Key Interfaces in the Collection API:
+        Collection – root interface for working with groups of objects (List, Set, Queue).
+        List – ordered collection (e.g., ArrayList, LinkedList).
+        Set – collection with no duplicate elements (e.g., HashSet, TreeSet).
+            HashSet:- Order is not followed
+            TreeSet:- Sort the values by default
+        Queue – used for FIFO operations (e.g., PriorityQueue, LinkedList).
+        Map – stores key-value pairs (e.g., HashMap, TreeMap) — not a subtype of Collection but part of the Collections framework. 
+                Keys in Map are unique
