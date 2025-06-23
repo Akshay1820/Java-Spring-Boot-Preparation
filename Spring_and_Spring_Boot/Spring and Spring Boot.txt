@@ -1,0 +1,131 @@
+What we are covering:-
+	Why Spring?
+	Featuers
+		IOC
+		DI
+	Application Context
+	Creating a spring boot project with simple hello world API
+		Profiles
+		@Autowired
+		@Primary @Qualifier
+	Creating a Spring project
+		Creating xml file configuration
+		
+	What Spring starter dependency provides.
+
+Why Spring:-
+	Initlaly as we uses Java EE to build enterprise application, but the drawback is, it was heavy and complex
+	
+	To make it light weight and simple. A framework introuduce having name "Spring".
+	
+	Using Spring we can build Enterprise application, web application and many more
+
+
+Why Spring is the best backend framework?
+	Security -> built in
+	Need database connection -> Just one annotation
+
+In Spring there are different modules 
+	Spring Boot
+	Spring cloud
+	Spring Security
+	Spring Data
+	
+	
+ 	
+	
+Features of Spring:-
+
+	IOC (Inversion of control):- 
+		lets suppose in project we have controller which handles API request, we have a service class which includes a busniess logic
+		and the reposiotory layer which will communicate with the database.
+		
+		So if we want to user a method of repository class,into service class or method of service class in reposiotory class.
+		we have to create objects of the particular class to access its features. typically we were instanciate the class using new {className}
+		But here we only creates the object, but as each objects has it life cycle means creation,managing,destorying,
+		we have to handle that manually, most of the time we dont do.
+		So we need some external power to do managing the life cycle of the object and there for Inversion of control comes into picture.
+		
+		IOC is responsible for creation of object, the only thing we have to do is we just need to provide the refrence.
+		But here IOC is just a Principle or a concept or a philosophy.
+		  
+		  
+	  
+
+	Dependency Injection:-
+		implementation of IOC:-
+		
+		We have Different ways for dependency injection.
+		Constructor injection
+		Setter injection
+		Field Injection
+	
+	
+IOC container:-
+	JVM creates IOC container, and that container is responsible for handling the life cycle of objects
+
+	
+
+Application Context:- 
+	
+	As we know, IOC container is responsible for storing and managing objects.
+	But it didn't store all the objects of the project, and we dont want that because we dont want to load our JVM full of objects.
+	So we have to inform Spring, which objects you have to manage. And that can be done using XML base configuration or Class based configuration
+	
+	ApplicationContext returne object of IOC container so we can get the bean that we want.
+	
+
+Why Spring Boot:-
+	Let suppose in our application we have 100 of classes and as we discussed Spring IOC will manage the life cycle of the object,but it is not magician, we have to do some configuration in xml file.
+	We specify class name that we have to manage and specify the bean id.
+	
+	Bean:- Is nothing but an object which is manage by SPRING IOC container.
+	
+	
+	Also to create a web application we need a server like tomcat,glassfish,jetty etc.
+	
+	So to get rid of all this Spring boot comes into picture,It comes with embedded tomcat server to run our application
+
+
+
+AutoWiring:-
+	
+	@AutoWired is called as feild injection
+	
+	@Primary:- Use to give high preference to the class when there are 2 beans of Similar Type (While using Interface)
+				This annotation we do on the class level
+				
+				
+	@Qualifier:- Alternative to @Primary annotation if we want to give preference during refrence creation we can use this annotation
+				also we have to specify the bean name for eg If we want object of Laptop, the bean name will be laptop, by default Spring creates bean name by class name by keeping first letter in small case.
+	
+
+
+
+
+
+Spring MVC (Model View Controller):- It is a spring web framework which is use to build web applications.
+
+
+	
+Questions for assignment:-
+		Why Feild Injection is not a good option.
+		
+		
+		
+		
+Spring Boot Starter
+	spring-boot-starer
+		Spring Context
+		Spring Bean
+		Logs
+		
+	spring-boot-starter-web	
+		Embeded Tomcat
+		Request Validation
+		Provides Jackson for Json Parsing
+		
+		
+		
+		ngrok http http://localhost:9000/
+		 https://53de-2409-40c2-2058-3d49-5427-7a57-1d48-e320.ngrok-free.app
